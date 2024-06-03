@@ -1,122 +1,233 @@
-@import url("https://fonts.googleapis.com/css2?family=poppins:wght@300;400;500;600;700;800;900&display=swap");
-
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing:border-box;
-	font-family: "poppins",sans-serif;
-}
-
+/* style1.css */
 body {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	min-height: 100vh;
-	background: url('cosmos-5809271_640.webp') no-repeat;
-	background-size: cover;
-	background-position: center;
-	
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f0f0f0;
 }
 
-.wrapper {
-	width: 420px;
-	background: transparent;
-	 border: x solid rgba(255, 255, 255, .2);
-	 backdrop-filter: blur(20px);
-	 box-shadow: 0 0 10px rgba(0, 0, 0, .2);
-	color: #fff;
-	border-radius: 10px;
-	padding: 30px 40px;
+.header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
-.wrapper h1{
-	font-size: 36px;
-	text-align: center;
+.header .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.wrapper .input-box {
-	width: 100%;
-	height: 50px;
-	background: transparent;
-	margin: 30px 0;
+.header .navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
 }
 
-.input-box input {
-	width: 100%;
-	height: 100%;
-	background: transparent;
-	border: none;
-	outline: none;
-	border: 2px solid rgba(255, 255, 255, .2);
-	border-radius: 40px;
-	font-size: 16px;
-	color: #fff;
-	padding: 20px 45px 20px 20px;
+.header .navbar a:hover {
+    background: #555;
 }
 
-
-.input-box input::placeholder {
-	color:#fff;
-
+.home {
+    margin-top: 60px; /* to account for fixed header */
+    padding: 20px;
+    background: url('banner.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    min-height: 400px;
 }
 
-.input-box  i {
-	position: absolute;
-	right: 60px;
-    transform: translateY(15px);
-	font-size: 20px;
+.home .content {
+    margin-top: 100px;
 }
 
-.wrapper .remember-forgot{
-	display: flex;
-	justify-content: space-between;
-	font-size: 14.5px;
-	margin: -15px 0 15px;
+.home .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background: #333;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
 }
 
-.remember-forgot label input {
-	accent-color:#fff;
-	margin-right: 3px;
-
+.home .btn:hover {
+    background: #555;
 }
 
-.remember-forgot a{
-	color: #fff;
-	text-decoration: none;
+.count {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.remember-forgot a:hover {
-	text-decoration: underline;
-
+.count .box {
+    text-align: center;
 }
 
-.wrapper .btn {
-	width: 100%;
-	height: 45px;
-	background: #fff;
-	border:none;
-	outline:none;
-	border-radius: 40px;
-	box-shadow: 0 0 10px rgba(0, 0, 0, .1);
-	cursor: pointer;
-	font-size: 16px;
-	color: #333;
-	font-weight: 600;
+.count .box i {
+    font-size: 2rem;
+    color: #333;
 }
 
-.wrapper .register-link {
-	font-size: 14.5px;
-	text-align: center;
-	margin-top: 20px0 15px;
+.count .box h3 {
+    margin: 10px 0;
+    font-size: 2rem;
 }
 
-.register-link p a {
-	color: #fff;
-	text-decoration: none;
-	font-weight: 600;
+.count .box p {
+    margin: 0;
+    color: #555;
 }
 
-.register-link p a:hover {
-	text-decoration: underline;
+.about, .courses, .member, .contact, .footer {
+    padding: 20px;
+    background: #fff;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.about .row, .contact .row {
+    display: flex;
+    align-items: center;
+}
+
+.about .row .image, .contact .row .image {
+    flex: 1;
+    padding: 20px;
+}
+
+.about .row .content, .contact .row form {
+    flex: 2;
+    padding: 20px;
+}
+
+.about .row .content h3, .contact .heading {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #333;
+}
+
+.about .row .content p, .contact .row form span {
+    color: #555;
+}
+
+.about .row .content .btn, .contact .row form .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background: #333;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.about .row .content .btn:hover, .contact .row form .btn:hover {
+    background: #555;
+}
+
+.courses .heading, .member .heading, .contact .heading {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #333;
+}
+
+.courses .swiper-slide, .member .swiper-slide {
+    text-align: center;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.courses .swiper-slide h3, .member .swiper-slide h3 {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.courses .swiper-slide p, .member .swiper-slide .share a {
+    color: #555;
+}
+
+.courses .swiper-slide img, .member .swiper-slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.member .swiper-slide .share {
+    margin-top: 10px;
+}
+
+.member .swiper-slide .share a {
+    margin: 0 5px;
+    color: #555;
+    text-decoration: none;
+}
+
+.member .swiper-slide .share a:hover {
+    color: #333;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact form .box {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.footer {
+    background: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer .box-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer .box {
+    flex: 1;
+    padding: 10px;
+}
+
+.footer .box h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.footer .box a {
+    display: block;
+    color: #ddd;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+
+.footer .box a:hover {
+    color: #fff;
+}
+
+.footer .credit {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #ddd;
+}
