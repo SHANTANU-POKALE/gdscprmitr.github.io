@@ -21,6 +21,9 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .header .navbar a {
@@ -34,7 +37,7 @@ body {
 }
 
 .home {
-    margin-top: 60px; /* to account for fixed header */
+    margin-top: 60px; /* Adjusted to ensure it clears the fixed header */
     padding: 20px;
     background: url('banner.jpg') no-repeat center center/cover;
     color: #fff;
